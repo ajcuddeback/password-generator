@@ -27,6 +27,10 @@ var generateBtn = document.querySelector("#generate");
 var generatePassword = function() {
         var passwordLength = prompt('How many characters would you like your password to be? (a good password is at least 8 characters and no more than 128 characters)');
         var interger = parseInt(passwordLength);
+        if(interger < 8 || interger > 128) {
+            alert('please input a number that is at least 8 and no more than 128')
+            generatePassword()
+        }
         alert('Please select ok if you would like the character type in your password or cancel if you do not want the character type in you password');
         var confirmLowerCase = confirm('Would you like lower case characters?');
         var confirmUpperCase = confirm('Would you like upper case characters?');
