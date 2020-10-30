@@ -19,7 +19,6 @@
 * Once user has inputed these paramater a password will be generated for them that they can copy and paste.
 
 ## Website
-* Click the image to be taken to the website!
 ![Password Generator](assets/images/Screen-shot.png)
 
 [Deployed Password Generator](https://ajcuddeback.github.io/password-generator)
