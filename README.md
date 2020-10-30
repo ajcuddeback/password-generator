@@ -20,7 +20,7 @@
 
 ## Website
 * Click the image to be taken to the website!
-![Password Generator](./assets/images/Screen-shot.png)
+![Password Generator](assets/images/Screen-shot.png)
 
 [Deployed Password Generator](https://ajcuddeback.github.io/password-generator)
 
