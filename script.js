@@ -30,193 +30,193 @@ var generatePassword = function() {
         var interger = parseInt(passwordLength);
         if(interger > 8 || interger < 128) {
             // Confirmation of what type of characters the user would like
-        alert('Please select ok if you would like the character type in your password or cancel if you do not want the character type in you password');
-        var confirmLowerCase = confirm('Would you like lower case characters?');
-        var confirmUpperCase = confirm('Would you like upper case characters?');
-        var confirmSpecial = confirm('Would you like special characters?');
-        var confirmNumber = confirm('Would you like numbers?');
+            alert('Please select ok if you would like the character type in your password or cancel if you do not want the character type in you password');
+            var confirmLowerCase = confirm('Would you like lower case characters?');
+            var confirmUpperCase = confirm('Would you like upper case characters?');
+            var confirmSpecial = confirm('Would you like special characters?');
+            var confirmNumber = confirm('Would you like numbers?');
 
-        // Logic for every possibility the user could chose
-        if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === true && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters1.length) + 1;
-                if(characterSelect === 1) {
+            // Logic for every possibility the user could chose
+            if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === true && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters1.length) + 1;
+                    if(characterSelect === 1) {
+                        var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                        finalPw += lowerCase[lowerCaseValue]
+                    }
+                    else if(characterSelect === 2) {
+                        var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                        finalPw += upperCase[upperCaseValue]
+                    }
+                    else if(characterSelect === 3) {
+                        var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                        finalPw += specialCharacters[specialValue]
+                    }
+                    else {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
+                    }
+                }
+            } else if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === true && confirmNumber === false) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters2.length) + 1;
+                    if(characterSelect === 1) {
+                        var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                        finalPw += lowerCase[lowerCaseValue]
+                    }
+                    else if(characterSelect === 2) {
+                        var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                        finalPw += upperCase[upperCaseValue]
+                    }
+                    else {
+                        var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                        finalPw += specialCharacters[specialValue]
+                    }
+                }
+            } else if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === false && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters3.length) + 1;
+                    if(characterSelect === 1) {
+                        var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                        finalPw += lowerCase[lowerCaseValue]
+                    }
+                    else if(characterSelect === 2) {
+                        var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                        finalPw += upperCase[upperCaseValue]
+                    }
+                    else {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
+                    }
+                }
+            } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === true && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters4.length) + 1;
+                    if(characterSelect === 1) {
+                        var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                        finalPw += upperCase[upperCaseValue]
+                    }
+                    else if(characterSelect === 2) {
+                        var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                        finalPw += specialCharacters[specialValue]
+                    }
+                    else {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
+                    }
+                }
+            } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === true && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters5.length) + 1;
+                    if(characterSelect === 1) {
+                        var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                        finalPw += lowerCase[lowerCaseValue]
+                    }
+                    else if(characterSelect === 2) {
+                        var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                        finalPw += specialCharacters[specialValue]
+                    }
+                    else {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
+                    }
+                }
+            } else if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === false && confirmNumber === false) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters6.length) + 1;
+                    if(characterSelect === 1) {
+                        var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                        finalPw += lowerCase[lowerCaseValue]
+                    }
+                    else {
+                        var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                        finalPw += upperCase[upperCaseValue]
+                    }
+                }
+            } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === true && confirmNumber === false) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters7.length) + 1;
+                    if(characterSelect === 1) {
+                        var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                        finalPw += lowerCase[lowerCaseValue]
+                    }
+                    else {
+                        var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                        finalPw += specialCharacters[specialValue]
+                    }
+                }
+            } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === false && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters8.length) + 1;
+                    if(characterSelect === 1) {
+                        var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                        finalPw += lowerCase[lowerCaseValue]
+                    }
+                    else {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
+                    }
+                }
+            } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === true && confirmNumber === false) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters9.length) + 1;
+                    if(characterSelect === 1) {
+                        var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                        finalPw += upperCase[upperCaseValue]
+                    }
+                    else{
+                        var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                        finalPw += specialCharacters[specialValue]
+                    }
+                }
+            } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === false && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters10.length) + 1;
+                    if(characterSelect === 1) {
+                        var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                        finalPw += upperCase[upperCaseValue]
+                    }
+                    else {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
+                    }
+                }
+            } else if(confirmLowerCase === false && confirmUpperCase === false && confirmSpecial === true && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                    var characterSelect = Math.floor(Math.random() * characters11.length) + 1;
+                    if(characterSelect === 1) {
+                        var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                        finalPw += specialCharacters[specialValue]
+                    }
+                    else {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
+                    }
+                }
+            } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === false && confirmNumber === false) {
+                for(i = 0; i < interger; i++) {
                     var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
                     finalPw += lowerCase[lowerCaseValue]
                 }
-                else if(characterSelect === 2) {
+            } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === false && confirmNumber === false) {
+                for(i = 0; i < interger; i++) {
                     var upperCaseValue = Math.floor(Math.random() * upperCase.length);
                     finalPw += upperCase[upperCaseValue]
                 }
-                else if(characterSelect === 3) {
+            }else if(confirmLowerCase === false && confirmUpperCase === false && confirmSpecial === true && confirmNumber === false) {
+                for(i = 0; i < interger; i++) {
                     var specialValue = Math.floor(Math.random() * specialCharacters.length);
                     finalPw += specialCharacters[specialValue]
                 }
-                else {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
+            }else if(confirmLowerCase === false && confirmUpperCase === false && confirmSpecial === false && confirmNumber === true) {
+                for(i = 0; i < interger; i++) {
+                        var numberValue = Math.floor(Math.random() * randomNumber.length);
+                        finalPw += randomNumber[numberValue]
                 }
+            } else {
+                alert('Please select at least one character value');
+                generatePassword()
             }
-        } else if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === true && confirmNumber === false) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters2.length) + 1;
-                if(characterSelect === 1) {
-                    var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                    finalPw += lowerCase[lowerCaseValue]
-                }
-                else if(characterSelect === 2) {
-                    var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                    finalPw += upperCase[upperCaseValue]
-                }
-                else {
-                    var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                    finalPw += specialCharacters[specialValue]
-                }
-            }
-        } else if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === false && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters3.length) + 1;
-                if(characterSelect === 1) {
-                    var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                    finalPw += lowerCase[lowerCaseValue]
-                }
-                else if(characterSelect === 2) {
-                    var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                    finalPw += upperCase[upperCaseValue]
-                }
-                else {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
-                }
-            }
-        } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === true && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters4.length) + 1;
-                if(characterSelect === 1) {
-                    var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                    finalPw += upperCase[upperCaseValue]
-                }
-                else if(characterSelect === 2) {
-                    var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                    finalPw += specialCharacters[specialValue]
-                }
-                else {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
-                }
-            }
-        } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === true && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters5.length) + 1;
-                if(characterSelect === 1) {
-                    var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                    finalPw += lowerCase[lowerCaseValue]
-                }
-                else if(characterSelect === 2) {
-                    var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                    finalPw += specialCharacters[specialValue]
-                }
-                else {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
-                }
-            }
-        } else if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === false && confirmNumber === false) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters6.length) + 1;
-                if(characterSelect === 1) {
-                    var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                    finalPw += lowerCase[lowerCaseValue]
-                }
-                else {
-                    var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                    finalPw += upperCase[upperCaseValue]
-                }
-            }
-        } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === true && confirmNumber === false) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters7.length) + 1;
-                if(characterSelect === 1) {
-                    var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                    finalPw += lowerCase[lowerCaseValue]
-                }
-                else {
-                    var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                    finalPw += specialCharacters[specialValue]
-                }
-            }
-        } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === false && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters8.length) + 1;
-                if(characterSelect === 1) {
-                    var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                    finalPw += lowerCase[lowerCaseValue]
-                }
-                else {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
-                }
-            }
-        } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === true && confirmNumber === false) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters9.length) + 1;
-                if(characterSelect === 1) {
-                    var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                    finalPw += upperCase[upperCaseValue]
-                }
-                else{
-                    var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                    finalPw += specialCharacters[specialValue]
-                }
-            }
-        } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === false && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters10.length) + 1;
-                if(characterSelect === 1) {
-                    var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                    finalPw += upperCase[upperCaseValue]
-                }
-                else {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
-                }
-            }
-        } else if(confirmLowerCase === false && confirmUpperCase === false && confirmSpecial === true && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                var characterSelect = Math.floor(Math.random() * characters11.length) + 1;
-                if(characterSelect === 1) {
-                    var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                    finalPw += specialCharacters[specialValue]
-                }
-                else {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
-                }
-            }
-        } else if(confirmLowerCase === true && confirmUpperCase === false && confirmSpecial === false && confirmNumber === false) {
-            for(i = 0; i < interger; i++) {
-                var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                finalPw += lowerCase[lowerCaseValue]
-            }
-        } else if(confirmLowerCase === false && confirmUpperCase === true && confirmSpecial === false && confirmNumber === false) {
-            for(i = 0; i < interger; i++) {
-                var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                finalPw += upperCase[upperCaseValue]
-            }
-        }else if(confirmLowerCase === false && confirmUpperCase === false && confirmSpecial === true && confirmNumber === false) {
-            for(i = 0; i < interger; i++) {
-                var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                finalPw += specialCharacters[specialValue]
-            }
-        }else if(confirmLowerCase === false && confirmUpperCase === false && confirmSpecial === false && confirmNumber === true) {
-            for(i = 0; i < interger; i++) {
-                    var numberValue = Math.floor(Math.random() * randomNumber.length);
-                    finalPw += randomNumber[numberValue]
-            }
-        } else {
-            alert('Please select at least one character value');
-            generatePassword()
-        }
         }else {
             alert('please input a valid number from 8 to 128.');
             generatePassword();
