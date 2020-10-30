@@ -28,7 +28,7 @@ var generatePassword = function() {
         //Asking for password length logic
         var passwordLength = prompt('How many characters would you like your password to be (i.e. 10, 50, 121)? (a good password is at least 8 characters and no more than 128 characters)');
         var interger = parseInt(passwordLength);
-        if(interger > 8 || interger < 128) {
+        if(interger > 8 && interger < 128) {
             // Confirmation of what type of characters the user would like
             alert('Please select ok if you would like the character type in your password or cancel if you do not want the character type in you password');
             var confirmLowerCase = confirm('Would you like lower case characters?');
