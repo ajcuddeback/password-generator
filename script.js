@@ -17,26 +17,26 @@ var generatePassword = function() {
         var confirmSpecial = confirm('Would you like special characters?');
         var confirmNumber = confirm('Would you like numbers?');
         
-
-        for(i = 0; i < interger; i++) {
-            var characterSelect = Math.floor(Math.random() * characters.length) + 1;
-            if(characterSelect === 1) {
-                var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
-                finalPw += lowerCase[lowerCaseValue]
+        if(confirmLowerCase === true && confirmUpperCase === true && confirmSpecial === true && confirmNumber === true) {
+            for(i = 0; i < interger; i++) {
+                var characterSelect = Math.floor(Math.random() * characters.length) + 1;
+                if(characterSelect === 1) {
+                    var lowerCaseValue = Math.floor(Math.random() * lowerCase.length);
+                    finalPw += lowerCase[lowerCaseValue]
+                }
+                else if(characterSelect === 2) {
+                    var upperCaseValue = Math.floor(Math.random() * upperCase.length);
+                    finalPw += upperCase[upperCaseValue]
+                }
+                else if(characterSelect === 3) {
+                    var specialValue = Math.floor(Math.random() * specialCharacters.length);
+                    finalPw += specialCharacters[specialValue]
+                }
+                else {
+                    var numberValue = Math.floor(Math.random() * randomNumber.length);
+                    finalPw += randomNumber[numberValue]
+                }
             }
-            else if(characterSelect === 2) {
-                var upperCaseValue = Math.floor(Math.random() * upperCase.length);
-                finalPw += upperCase[upperCaseValue]
-            }
-            else if(characterSelect === 3) {
-                var specialValue = Math.floor(Math.random() * specialCharacters.length);
-                finalPw += specialCharacters[specialValue]
-            }
-            else {
-                var numberValue = Math.floor(Math.random() * randomNumber.length);
-                finalPw += randomNumber[numberValue]
-            }
-
         }
 
 }
